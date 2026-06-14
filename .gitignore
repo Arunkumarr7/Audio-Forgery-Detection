@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.npy
+data/all_audio/
+data/meta.csv
+.DS_Store
