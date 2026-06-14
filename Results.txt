@@ -1,0 +1,53 @@
+(venv) PS D:\Mtech\2nd sem\DL\Project\Audio_Forgery_Detection> python train_traditional.py
+Training Traditional Model: Chroma + Random Forest...
+
+Traditional Model Accuracy: 77.38%
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.78      0.88      0.83      3993
+           1       0.75      0.59      0.66      2363
+
+    accuracy                           0.77      6356
+   macro avg       0.77      0.74      0.75      6356
+weighted avg       0.77      0.77      0.77      6356
+
+(venv) PS D:\Mtech\2nd sem\DL\Project\Audio_Forgery_Detection> 
+
+
+
+
+
+
+
+
+
+
+
+(venv) PS D:\Mtech\2nd sem\DL\Project\Audio_Forgery_Detection> python train_hybrid.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781411902.484244   14000 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781411953.156136   14000 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1781411974.203177   14000 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with theappropriate compiler flags.
+Extracting Deep Features using 1D CNN...
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNNare installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+795/795 ━━━━━━━━━━━━━━━━━━━━ 7s 2ms/step    
+199/199 ━━━━━━━━━━━━━━━━━━━━ 0s 2ms/step 
+Training Hybrid Model: 1D CNN features + SVM Backend...
+
+Hybrid Model Accuracy: 65.72%
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.65      0.97      0.78      3950
+           1       0.73      0.15      0.25      2406
+
+    accuracy                           0.66      6356
+   macro avg       0.69      0.56      0.51      6356
+weighted avg       0.68      0.66      0.58      6356
+
+(venv) PS D:\Mtech\2nd sem\DL\Project\Audio_Forgery_Detection> 
